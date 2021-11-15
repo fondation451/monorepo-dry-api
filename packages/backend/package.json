@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@dry-api/core": "*"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index",
+  "name": "@dry-api/backend",
+  "scripts": {
+    "clean": "rimraf -rf ./dist && rimraf -rf ./build",
+    "cleanAll": "yarn run clean && rimraf -rf ./node_modules",
+    "compile": "tsc -p tsconfig.build.json",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet"
+  },
+  "types": "dist/index",
+  "version": "1.0.0"
+}
